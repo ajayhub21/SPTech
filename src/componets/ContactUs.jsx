@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
     city: "",
+    email: "", // Added email to the formData
   });
   const [formStatus, setFormStatus] = useState(null);
 
@@ -59,10 +61,7 @@ const ContactUs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Name Field */}
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   Name
                 </label>
                 <input
@@ -79,10 +78,7 @@ const ContactUs = () => {
 
               {/* Phone Number Field */}
               <div>
-                <label
-                  htmlFor="mobile"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">
                   Phone Number
                 </label>
                 <input
@@ -99,10 +95,7 @@ const ContactUs = () => {
 
               {/* City Field */}
               <div>
-                <label
-                  htmlFor="city"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                   City
                 </label>
                 <input
@@ -112,6 +105,23 @@ const ContactUs = () => {
                   value={formData.city}
                   onChange={handleChange}
                   placeholder="Enter your city"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:text-customText focus:outline-none"
+                  required
+                />
+              </div>
+
+              {/* Email Field */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
                   className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:text-customText focus:outline-none"
                   required
                 />
@@ -159,13 +169,13 @@ const ContactUs = () => {
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <p className="text-lg text-gray-600 font-medium">Phone</p>
-              <a href="tel:+1234567890" className="text-blue-600 hover:underline">
+              <a href="tel:+1234567890" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
                 +1 234 567 890
               </a>
             </div>
             <div className="text-center">
               <p className="text-lg text-gray-600 font-medium">Email</p>
-              <a href="mailto:info@yourbusiness.com" className="text-blue-600 hover:underline">
+              <a href="mailto:info@yourbusiness.com" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
                 info@yourbusiness.com
               </a>
             </div>
@@ -180,17 +190,21 @@ const ContactUs = () => {
         <div className="mt-12 text-center">
           <h2 className="text-2xl font-bold text-gray-800">Follow Us</h2>
           <div className="mt-4 flex justify-center gap-6">
-            <a href="https://facebook.com" className="text-blue-600 hover:text-blue-800">
-              Facebook
+            <a href="https://facebook.com" target="_blank" className="text-transparent bg-clip-text bg-custom-gradient hover:text-blue-800 flex items-center space-x-2">
+              <FaFacebook className="w-5 h-5" />
+              <span>Facebook</span>
             </a>
-            <a href="https://twitter.com" className="text-blue-600 hover:text-blue-800">
-              Twitter
+            <a href="https://twitter.com" target="_blank" className="text-transparent bg-clip-text bg-custom-gradient hover:text-blue-800 flex items-center space-x-2">
+              <FaTwitter className="w-5 h-5" />
+              <span>Twitter</span>
             </a>
-            <a href="https://linkedin.com" className="text-blue-600 hover:text-blue-800">
-              LinkedIn
+            <a href="https://linkedin.com" target="_blank" className="text-transparent bg-clip-text bg-custom-gradient hover:text-blue-800 flex items-center space-x-2">
+              <FaLinkedin className="w-5 h-5" />
+              <span>LinkedIn</span>
             </a>
-            <a href="https://instagram.com" className="text-pink-600 hover:text-pink-800">
-              Instagram
+            <a href="https://instagram.com" target="_blank" className="text-transparent bg-clip-text bg-custom-gradient hover:text-pink-800 flex items-center space-x-2">
+              <FaInstagram className="w-5 h-5" />
+              <span>Instagram</span>
             </a>
           </div>
         </div>

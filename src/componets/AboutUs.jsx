@@ -46,7 +46,7 @@ const AboutUs = () => {
           <h3 className="text-2xl font-semibold text-center text-transparent bg-clip-text bg-custom-gradient mb-4">
             Mission & Vision
           </h3>
-          <p className="text-lg text-center leading-relaxed mx-auto max-w-2xl">
+          <p className="text-lg text-center text-gray-600 leading-relaxed mx-auto max-w-2xl">
             Our mission is to transform document management by providing fast,
             secure, and user-friendly scanning services. We aim to be the leader
             in digital document solutions, helping our clients boost
@@ -66,7 +66,7 @@ const AboutUs = () => {
             <h4 className="text-xl text-transparent bg-clip-text bg-custom-gradient mb-4">
               Speed
             </h4>
-            <p>
+            <p className="text-gray-600">
               We pride ourselves on delivering fast results without compromising
               quality. Your documents will be scanned and ready in no time.
             </p>
@@ -78,7 +78,7 @@ const AboutUs = () => {
             <h4 className="text-xl text-transparent bg-clip-text bg-custom-gradient mb-4">
               Accuracy
             </h4>
-            <p>
+            <p className="text-gray-600">
               Our technology ensures precise and accurate scanning, preserving
               every detail of your documents for future use.
             </p>
@@ -90,7 +90,7 @@ const AboutUs = () => {
             <h4 className="text-xl text-transparent bg-clip-text bg-custom-gradient mb-4">
               Affordability
             </h4>
-            <p>
+            <p className="text-gray-600">
               We offer competitive pricing without compromising the quality of
               service, making our solutions affordable for businesses of all
               sizes.
