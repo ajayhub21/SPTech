@@ -4,11 +4,11 @@ import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About us", href: "/Aboutus" },
-  { name: "Services", href: "/Services" },
-  { name: "Portfolio", href: "/PortfolioCaseStudies" },
-  { name: "Contact Us", href: "/ContactUs" },
-  { name: "FAQ", href: "/FAQ" },
+  { name: "About us", href: "/SPTech/Aboutus" },
+  { name: "Services", href: "/SPTech/Services" },
+  { name: "Portfolio", href: "/SPTech/PortfolioCaseStudies" },
+  { name: "Contact Us", href: "/SPTech/ContactUs" },
+  { name: "FAQ", href: "/SPTech/FAQ" },
 ];
 
 function classNames(...classes) {
