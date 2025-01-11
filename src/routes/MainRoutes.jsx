@@ -10,7 +10,7 @@ import Navbar from "../componets/Navbar";
 import Footer from "../componets/Footer";
 import Services from "../componets/Services";
 import FAQ from "../componets/FAQ";
-
+import PortfolioCaseStudies from "../componets/PortfolioCaseStudies";
 const LayOut = () => {
   return (
     <div className="pt-16">
@@ -30,6 +30,10 @@ function IntroRoutes() {
           <Route path="Aboutus" element={<AboutUs />} />
           <Route path="Services" element={<Services />} />
           <Route path="FAQ" element={<FAQ />} />
+          <Route
+            path="PortfolioCaseStudies"
+            element={<PortfolioCaseStudies />}
+          />
         </Route>
       </Routes>
     </Router>

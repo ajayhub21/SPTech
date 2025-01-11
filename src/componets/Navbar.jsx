@@ -6,7 +6,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About us", href: "/Security" },
   { name: "Services", href: "/Services" },
-  { name: "Pricing/Plans", href: "/Patients" },
+  { name: "Portfolio", href: "/PortfolioCaseStudies" },
   { name: "Contact Us", href: "/Login" },
   { name: "FAQ", href: "/FAQ" },
 ];
@@ -23,7 +23,10 @@ export default function Navbar() {
   }));
 
   return (
-    <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-md">
+    <Disclosure
+      as="nav"
+      className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-md"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
