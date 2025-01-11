@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="mb-8 lg:mb-0">
             <a href="/" className="inline-block mb-4">
               <img
-                src="https://cdn.prod.website-files.com/61d565f8e34ebb4e5dae2da8/61dc3c7b73f74ee633b43591_Logo.svg"
+                src="public/SPLOGO.svg"
                 alt="Logo"
                 className="h-10 mx-auto lg:mx-0"
               />

@@ -11,6 +11,7 @@ import Footer from "../componets/Footer";
 import Services from "../componets/Services";
 import FAQ from "../componets/FAQ";
 import PortfolioCaseStudies from "../componets/PortfolioCaseStudies";
+import ContactUs from "../componets/ContactUs";
 const LayOut = () => {
   return (
     <div className="pt-16">
@@ -34,6 +35,7 @@ function IntroRoutes() {
             path="PortfolioCaseStudies"
             element={<PortfolioCaseStudies />}
           />
+          <Route path="ContactUs" element={<ContactUs/>}/>
         </Route>
       </Routes>
     </Router>
