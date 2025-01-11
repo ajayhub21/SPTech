@@ -3,11 +3,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
-  { name: "Product", href: "/" },
-  { name: "Security", href: "/Security" },
+  { name: "Home", href: "/" },
+  { name: "About us", href: "/Security" },
+  { name: "Services", href: "/Services" },
+  { name: "Pricing/Plans", href: "/Patients" },
+  { name: "Contact Us", href: "/Login" },
   { name: "FAQ", href: "/FAQ" },
-  { name: "Patients", href: "/Patients" },
-  { name: "Login/Signup", href: "/Login" },
 ];
 
 function classNames(...classes) {
