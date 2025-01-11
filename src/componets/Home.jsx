@@ -43,7 +43,7 @@ const Home = () => {
             />
             <button
               type="submit"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition transform hover:-translate-y-1 hover:shadow-lg"
+              className="bg-custom-gradient text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition transform hover:-translate-y-1 hover:shadow-lg"
             >
               Contact Us
             </button>
@@ -52,11 +52,11 @@ const Home = () => {
 
         {/* Right Image */}
         <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center relative">
-          <div className="relative w-full max-w-md">
+          <div className="relative w-full max-w-md transform -translate-x-8">
             <img
               src="/sideimg.webp"
               alt="Document Scanning Solutions"
-              className="w-full h-auto rounded-xl shadow-lg object-cover transform transition duration-300 hover:scale-105"
+              className="w-full h-auto rounded-xl shadow-lg object-cover transition duration-300 hover:scale-105"
             />
             <img
               src="https://cdn.prod.website-files.com/61d565f8e34ebb4e5dae2da8/61dbf9fda79a38f033c52b3b_Hero%20Circle%202.svg"
