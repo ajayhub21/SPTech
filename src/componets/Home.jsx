@@ -16,14 +16,14 @@ const Home = () => {
     <div className="py-16 bg-gradient-to-b from-blue-50 to-white min-h-screen flex items-center">
       {/* Hero Section */}
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center lg:space-x-12">
-        
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-custom-gradient leading-tight mb-6">
             Effortless Document Scanning Solutions for Your Business Needs
           </h1>
           <p className="text-gray-700 text-lg mb-8 max-w-xl">
-            Streamline your document management with advanced scanning technology designed to enhance productivity and efficiency.
+            Streamline your document management with advanced scanning
+            technology designed to enhance productivity and efficiency.
           </p>
           <form
             onSubmit={handleSubmit}
@@ -54,7 +54,7 @@ const Home = () => {
         <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center relative">
           <div className="relative w-full max-w-md transform -translate-x-8">
             <img
-              src="/sideimg.webp"
+              src="/public/HomeSide.jpg"
               alt="Document Scanning Solutions"
               className="w-full h-auto rounded-xl shadow-lg object-cover transition duration-300 hover:scale-105"
             />
