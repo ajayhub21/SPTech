@@ -35,7 +35,7 @@ export default function Navbar() {
               <div className="flex items-center">
                 <img
                   className="h-12 w-auto sm:h-14 lg:h-16"
-                  src="/SPLOGO.svg"
+                  src="/SPTech/SPLOGO.svg"
                   alt="SP Technology Logo"
                 />
               </div>

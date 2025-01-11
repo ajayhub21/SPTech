@@ -184,24 +184,12 @@ const Footer = () => {
                 className="h-12"
               />
             </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.docon.lite"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-90"
-            >
-              <img
-                src="https://cdn.prod.website-files.com/61d565f8e34ebb4e5dae2da8/61de9109a88d8844eedad418_Playstore.png"
-                alt="Play Store"
-                className="h-12"
-              />
-            </a>
           </div>
         </div>
 
         {/* Footer Bottom Section */}
         <div className="mt-12 text-center text-sm text-gray-400">
-          © All rights reserved. Docon Technologies Pvt. Ltd 2022
+          © All rights reserved. SP Technologies
         </div>
       </div>
     </footer>
