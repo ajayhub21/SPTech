@@ -1,35 +1,48 @@
+import {
+  BoltIcon,
+  CheckCircleIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/24/solid";
+
 const AboutUs = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-100 to-purple-100 text-gray-800">
+    <section className="text-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-custom-gradient mb-12">
+        {/* <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-custom-gradient mb-8">
           About Us
-        </h2>
+        </h2> */}
+        <div className="py-16 bg-gradient-to-b from-blue-50 to-white min-h-screen flex items-center">
+          {/* Hero Section */}
+          <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center lg:space-x-12">
+            {/* Left Content */}
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-custom-gradient leading-tight mb-6">
+                Our Story
+              </h1>
+              <p className="text-gray-700 text-lg mb-8 max-w-xl">
+                SP Technology started with a vision to provide seamless and
+                efficient document scanning services. With years of expertise,
+                we ensure top-quality service for businesses and individuals
+                looking for reliable digital document solutions
+              </p>
+            </div>
 
-        {/* Your Story */}
-        <div className="flex flex-col md:flex-row items-center justify-between mb-16 space-y-8 md:space-y-0">
-          <div className="md:w-1/2">
-            <h3 className="text-2xl text-transparent bg-clip-text bg-custom-gradient mb-4">
-              Our Story
-            </h3>
-            <p className="text-lg leading-relaxed text-gray-600">
-              SP Technology started with a vision to provide seamless and
-              efficient document scanning services. With years of expertise, we
-              ensure top-quality service for businesses and individuals looking
-              for reliable digital document solutions.
-            </p>
-          </div>
-          <div className="md:w-1/2 flex justify-center">
-            <img
-              src="public/sideimg2.webp"
-              alt="Company Story"
-              className="w-full max-w-lg h-auto rounded-lg shadow-xl transform transition duration-500 hover:scale-105"
-            />
+            {/* Right Image */}
+            <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center relative">
+              <div className="relative w-full max-w-md transform -translate-x-8">
+                <img
+                  src="/public/aboutus.jpg"
+                  alt="Document Scanning Solutions"
+                  className="w-full h-auto rounded-xl shadow-lg object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+            </div>
           </div>
         </div>
+        {/* Your Story */}
 
         {/* Mission & Vision */}
-        <div className="mb-16">
+        <div className="mb-12 bg-blue-50 p-8 rounded-lg border border-blue-200 shadow-md">
           <h3 className="text-2xl font-semibold text-center text-transparent bg-clip-text bg-custom-gradient mb-4">
             Mission & Vision
           </h3>
@@ -42,8 +55,14 @@ const AboutUs = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-          <div className="p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <h3 className="text-3xl font-bold text-center text-transparent bg-clip-text bg-custom-gradient mb-8">
+          Why Choose Us
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center mb-8">
+          <div className="p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            <div className="flex justify-center mb-4">
+              <BoltIcon className="h-12 w-12 text-blue-500" />
+            </div>
             <h4 className="text-xl text-transparent bg-clip-text bg-custom-gradient mb-4">
               Speed
             </h4>
@@ -52,7 +71,10 @@ const AboutUs = () => {
               quality. Your documents will be scanned and ready in no time.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+          <div className="p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            <div className="flex justify-center mb-4">
+              <CheckCircleIcon className="h-12 w-12 text-green-500" />
+            </div>
             <h4 className="text-xl text-transparent bg-clip-text bg-custom-gradient mb-4">
               Accuracy
             </h4>
@@ -61,7 +83,10 @@ const AboutUs = () => {
               every detail of your documents for future use.
             </p>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+          <div className="p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            <div className="flex justify-center mb-4">
+              <CurrencyDollarIcon className="h-12 w-12 text-yellow-500" />
+            </div>
             <h4 className="text-xl text-transparent bg-clip-text bg-custom-gradient mb-4">
               Affordability
             </h4>
