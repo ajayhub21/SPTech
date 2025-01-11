@@ -31,7 +31,7 @@ const AboutUs = () => {
             <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center relative">
               <div className="relative w-full max-w-md transform -translate-x-8">
                 <img
-                  src="/public/aboutus.jpg"
+                  src="/aboutus.jpg"
                   alt="Document Scanning Solutions"
                   className="w-full h-auto rounded-xl shadow-lg object-cover transition duration-300 hover:scale-105"
                 />
