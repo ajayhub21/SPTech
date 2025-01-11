@@ -22,10 +22,7 @@ export default function Navbar() {
   }));
 
   return (
-    <Disclosure
-      as="nav"
-      className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-md"
-    >
+    <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-md">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -33,9 +30,9 @@ export default function Navbar() {
               {/* Logo Section */}
               <div className="flex items-center">
                 <img
-                  className="h-10 w-auto"
-                  src="Company_Logo-trasparent.png"
-                  alt="Your Company"
+                  className="h-12 w-auto sm:h-14 lg:h-16"
+                  src="/SPLOGO.svg"
+                  alt="SP Technology Logo"
                 />
               </div>
 
@@ -109,7 +106,7 @@ export default function Navbar() {
             <div className="px-4 mt-3">
               <Link
                 to="/join-us"
-                className="block w-full rounded-md bg-white px-4 py-2 text-center text-sm font-medium text-white-900 hover:text-customText shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                className="block w-full rounded-md bg-white px-4 py-2 text-center text-sm font-medium text-black hover:text-customText shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
               >
                 Join Us
               </Link>
