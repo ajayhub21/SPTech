@@ -52,16 +52,16 @@ const Home = () => {
 
         {/* Right Image */}
         <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center relative">
-          <div className="relative">
+          <div className="relative w-full max-w-md">
             <img
               src="/sideimg.webp"
               alt="Document Scanning Solutions"
-              className="max-w-full rounded-xl shadow-lg transform transition duration-300 hover:scale-105"
+              className="w-full h-auto rounded-xl shadow-lg object-cover transform transition duration-300 hover:scale-105"
             />
             <img
               src="https://cdn.prod.website-files.com/61d565f8e34ebb4e5dae2da8/61dbf9fda79a38f033c52b3b_Hero%20Circle%202.svg"
               alt="Circle Design"
-              className="absolute -top-8 -right-8 w-32 h-32 opacity-75 animate-pulse"
+              className="absolute -top-6 -right-6 w-20 h-20 opacity-75 animate-pulse"
             />
           </div>
         </div>
