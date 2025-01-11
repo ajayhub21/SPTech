@@ -9,6 +9,7 @@ import AboutUs from "../componets/AboutUs";
 import Navbar from "../componets/Navbar";
 import Footer from "../componets/Footer";
 import Services from "../componets/Services";
+import FAQ from "../componets/FAQ";
 
 const LayOut = () => {
   return (
@@ -28,6 +29,7 @@ function IntroRoutes() {
           <Route index element={<Home />} />
           <Route path="Aboutus" element={<AboutUs />} />
           <Route path="Services" element={<Services />} />
+          <Route path="FAQ" element={<FAQ />} />
         </Route>
       </Routes>
     </Router>
