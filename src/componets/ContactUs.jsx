@@ -180,16 +180,16 @@ const ContactUs = () => {
         <div className="mt-12 text-center">
           <h2 className="text-2xl font-bold text-gray-800">Follow Us</h2>
           <div className="mt-4 flex justify-center gap-6">
-            <a href="https://facebook.com" className="text-blue-600 hover:text-blue-800">
+            <a href="https://facebook.com" target="_blank" className="text-blue-600 hover:text-blue-800">
               Facebook
             </a>
-            <a href="https://twitter.com" className="text-blue-600 hover:text-blue-800">
+            <a href="https://twitter.com"target="_blank" className="text-blue-600 hover:text-blue-800">
               Twitter
             </a>
-            <a href="https://linkedin.com" className="text-blue-600 hover:text-blue-800">
+            <a href="https://linkedin.com" target="_blank" className="text-blue-600 hover:text-blue-800">
               LinkedIn
             </a>
-            <a href="https://instagram.com" className="text-pink-600 hover:text-pink-800">
+            <a href="https://instagram.com" target="_blank" className="text-pink-600 hover:text-pink-800">
               Instagram
             </a>
           </div>
