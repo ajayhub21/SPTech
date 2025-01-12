@@ -3,7 +3,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: "/SPTech/Home" },
   { name: "About us", href: "/SPTech/Aboutus" },
   { name: "Services", href: "/SPTech/Services" },
   { name: "Portfolio", href: "/SPTech/PortfolioCaseStudies" },
