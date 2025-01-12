@@ -29,7 +29,7 @@ function IntroRoutes() {
     <Router>
       <Routes>
         <Route path="/SPTech" element={<LayOut />}>
-          <Route path="/SPTech/Home" element={<Home />} />
+          <Route path="/SPTech" element={<Home />} />
           <Route path="/SPTech/Aboutus" element={<AboutUs />} />
           <Route path="/SPTech/Services" element={<Services />} />
           <Route path="/SPTech/FAQ" element={<FAQ />} />

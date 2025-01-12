@@ -3,12 +3,26 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      animation: {
+        fadeIn: "fadeIn 1.5s ease-in-out",
+        slideIn: "slideIn 1s ease-out",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        slideIn: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
       colors: {
         customText: "#00576A",
-        Textcolor: "#A6A6A6", // Add your custom text color
+        Textcolor: "#A6A6A6", // Custom text color
       },
       margin: {
-        273: "273px", // Add custom margin value
+        273: "273px", // Custom margin value
       },
       height: {
         26: "26rem", // Custom height value
