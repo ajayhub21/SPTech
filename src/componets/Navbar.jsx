@@ -25,11 +25,11 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-md"
+      className="fixed top-0 left-0 w-full  z-50 "
     >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 bg-gradient-to-b from-blue-50 to-white sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               {/* Logo Section */}
               <div className="flex items-center">
@@ -50,7 +50,7 @@ export default function Navbar() {
                       className={classNames(
                         item.current
                           ? "bg-white text-customText"
-                          : "text-white hover:bg-white hover:text-customText",
+                          : "text-gray-800 hover:bg-white hover:text-customText",
                         "rounded-md px-4 py-2 text-sm font-medium transition-all duration-300"
                       )}
                       aria-current={item.current ? "page" : undefined}
