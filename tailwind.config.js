@@ -33,7 +33,8 @@ module.exports = {
         "custom-navbar": "linear-gradient(220.55deg, #78B3CE 0%, #C9E6F0 100%)",
       },
       fontFamily: {
-        sans: ["Roboto", "sans-serif"], // Set Roboto as the default sans-serif font
+        sans: ["Roboto", "sans-serif"],
+        poppins: ["Poppins"], // Set Roboto as the default sans-serif font
       },
     },
   },
