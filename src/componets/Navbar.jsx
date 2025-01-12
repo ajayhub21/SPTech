@@ -23,10 +23,13 @@ export default function Navbar() {
   }));
 
   return (
-    <Disclosure as="nav" className="absolute top-0 left-0 w-full z-50 ">
+    <Disclosure
+      as="nav"
+      className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-md"
+    >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 bg-gradient-to-b from-blue-50 to-white sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <img
@@ -36,32 +39,25 @@ export default function Navbar() {
                 />
               </div>
 
-              <div className="hidden lg:flex space-x-8">
-                {updatedNavigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={classNames(
-                      item.current
-                        ? "text-yellow-500 border-b-2 border-yellow-500"
-                        : "text-black hover:text-yellow-500",
-                      "text-lg font-medium transition-all"
-                    )}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    <span className="mr-2">{item.icon}</span>
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-
-              <div className="hidden lg:flex">
-                <Link
-                  to="/JoinUs"
-                  className="ml-4 inline-flex items-center justify-center rounded-full bg-yellow-500 px-6 py-3 text-base font-semibold text-black hover:bg-yellow-600 hover:shadow-xl transition-transform transform hover:scale-105"
-                >
-                  Join Us
-                </Link>
+              {/* Desktop Navigation */}
+              <div className="hidden lg:block">
+                <div className="flex space-x-6">
+                  {updatedNavigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={classNames(
+                        item.current
+                          ? "bg-white text-customText"
+                          : "text-white hover:bg-white hover:text-customText",
+                        "rounded-md px-4 py-2 text-sm font-medium transition-all duration-300"
+                      )}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
 
               <div className="flex lg:hidden">

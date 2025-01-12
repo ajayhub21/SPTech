@@ -58,7 +58,7 @@ const Blog = () => {
             </p>
             <a
               href="#"
-              className="mt-6 px-6 py-2 bg-custom-gradient to-red-500 text-white rounded-lg shadow-md hover:scale-105 transition"
+              className="mt-10 relative top-3 px-6 py-2 bg-custom-gradient to-red-500 text-white rounded-lg shadow-md hover:scale-105 transition"
             >
               View All Resources
             </a>
