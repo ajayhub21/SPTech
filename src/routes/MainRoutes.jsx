@@ -28,18 +28,18 @@ function IntroRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LayOut />}>
-          <Route index element={<Home />} />
-          <Route path="Aboutus" element={<AboutUs />} />
-          <Route path="Services" element={<Services />} />
-          <Route path="FAQ" element={<FAQ />} />
-          <Route path="Pricing" element={<Pricing/>}/>
-          <Route path="Blog" element={<Blog/>}/>
+        <Route path="/SPTech" element={<LayOut />}>
+          <Route path="/SPTech/Home" element={<Home />} />
+          <Route path="/SPTech/Aboutus" element={<AboutUs />} />
+          <Route path="/SPTech/Services" element={<Services />} />
+          <Route path="/SPTech/FAQ" element={<FAQ />} />
+          <Route path="/SPTech/Pricing" element={<Pricing />} />
+          <Route path="/SPTech/Blog" element={<Blog />} />
           <Route
-            path="PortfolioCaseStudies"
+            path="/SPTech/PortfolioCaseStudies"
             element={<PortfolioCaseStudies />}
           />
-          <Route path="ContactUs" element={<ContactUs/>}/>
+          <Route path="/SPTech/ContactUs" element={<ContactUs />} />
         </Route>
       </Routes>
     </Router>

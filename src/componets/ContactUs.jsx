@@ -53,16 +53,14 @@ const ContactUs = () => {
     }
 
     try {
-      const response = await fetch(
-        "https://alpha.docon.co.in/api/v1/campaign/promo/form",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      // Send the form data to the backend
+      const response = await fetch("http://localhost:5000/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
         setFormStatus("success");

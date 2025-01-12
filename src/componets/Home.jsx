@@ -54,7 +54,7 @@ const Home = () => {
         <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center relative">
           <div className="relative w-full max-w-md transform -translate-x-8">
             <img
-              src="/public/HomeSide.jpg"
+              src="/SPTech/HomeSide1"
               alt="Document Scanning Solutions"
               className="w-full relative -top-6 -right-10 h-auto max-w-[90%] md:max-w-[75%] rounded-xl shadow-lg object-cover transition duration-300 hover:scale-105"
             />
