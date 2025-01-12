@@ -6,9 +6,17 @@ const ContactUs = () => {
     name: "",
     mobile: "",
     city: "",
-    email: "", // Added email to the formData
+    email: "",
   });
   const [formStatus, setFormStatus] = useState(null);
+  const [errors, setErrors] = useState({});
+
+  // Validate phone number (only digits)
+  const validatePhoneNumber = (number) => /^\d+$/.test(number);
+
+  // Validate email format
+  const validateEmail = (email) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,10 +24,34 @@ const ContactUs = () => {
       ...formData,
       [name]: value,
     });
+
+    // Reset error for current field
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const newErrors = {};
+
+    // Validate phone number
+    if (!validatePhoneNumber(formData.mobile)) {
+      newErrors.mobile = "Phone number must contain only digits.";
+    }
+
+    // Validate email format
+    if (!validateEmail(formData.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    // Set errors if any
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
     try {
       const response = await fetch(
         "https://alpha.docon.co.in/api/v1/campaign/promo/form",
@@ -34,6 +66,7 @@ const ContactUs = () => {
 
       if (response.ok) {
         setFormStatus("success");
+        setFormData({ name: "", mobile: "", city: "", email: "" }); // Reset form
       } else {
         setFormStatus("error");
       }
@@ -47,7 +80,7 @@ const ContactUs = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 sm:text-5xl">
+          <h1 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-custom-gradient text-gray-800">
             Contact Us for Inquiries or Custom Quotes
           </h1>
           <p className="mt-4 text-lg text-gray-600">
@@ -58,7 +91,7 @@ const ContactUs = () => {
         {/* Contact Form Section */}
         <div className="mt-12 bg-white shadow-xl rounded-lg p-8">
           <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -71,7 +104,7 @@ const ContactUs = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your name"
-                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:text-customText focus:outline-none"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   required
                 />
               </div>
@@ -88,9 +121,12 @@ const ContactUs = () => {
                   value={formData.mobile}
                   onChange={handleChange}
                   placeholder="Enter your phone number"
-                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:text-customText focus:outline-none"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   required
                 />
+                {errors.mobile && (
+                  <p className="text-red-600 text-sm mt-1">{errors.mobile}</p>
+                )}
               </div>
 
               {/* City Field */}
@@ -105,7 +141,7 @@ const ContactUs = () => {
                   value={formData.city}
                   onChange={handleChange}
                   placeholder="Enter your city"
-                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:text-customText focus:outline-none"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   required
                 />
               </div>
@@ -122,27 +158,30 @@ const ContactUs = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
-                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:text-customText focus:outline-none"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   required
                 />
+                {errors.email && (
+                  <p className="text-red-600 text-sm mt-1">{errors.email}</p>
+                )}
               </div>
             </div>
 
             {/* Terms and Submit Button */}
             <div className="mt-6 text-sm text-gray-600">
               By submitting your information, you agree to our{" "}
-              <a href="/Privacy" className="text-customText hover:underline">
+              <a href="/Privacy" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
                 Privacy Policy
               </a>{" "}
               and{" "}
-              <a href="/Terms" className="text-customText hover:underline">
+              <a href="/Terms" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
                 Terms of Use
               </a>
               .
             </div>
             <button
               type="submit"
-              className="mt-6 w-full bg-custom-gradient text-white px-6 py-2 rounded-lg hover:from-blue-600 hover:to-purple-700 transition transform hover:-translate-y-1 hover:shadow-lg"
+              className="mt-6 w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition transform hover:-translate-y-1 hover:shadow-lg"
             >
               Submit
             </button>
@@ -159,69 +198,6 @@ const ContactUs = () => {
               Oops! Something went wrong while submitting the form.
             </div>
           )}
-        </div>
-
-        {/* Contact Details Section */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-center text-gray-800">
-            Contact Details
-          </h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <p className="text-lg text-gray-600 font-medium">Phone</p>
-              <a href="tel:+1234567890" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
-                +1 234 567 890
-              </a>
-            </div>
-            <div className="text-center">
-              <p className="text-lg text-gray-600 font-medium">Email</p>
-              <a href="mailto:info@yourbusiness.com" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
-                info@yourbusiness.com
-              </a>
-            </div>
-            <div className="text-center">
-              <p className="text-lg text-gray-600 font-medium">Address</p>
-              <p className="text-gray-600">123 Your Business St, City, Country</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Social Media Section */}
-        <div className="mt-12 text-center">
-          <h2 className="text-2xl font-bold text-gray-800">Follow Us</h2>
-          <div className="mt-4 flex justify-center gap-6">
-            <a href="https://facebook.com" target="_blank" className="text-transparent bg-clip-text bg-custom-gradient hover:text-blue-800 flex items-center space-x-2">
-              <FaFacebook className="w-5 h-5" />
-              <span>Facebook</span>
-            </a>
-            <a href="https://twitter.com" target="_blank" className="text-transparent bg-clip-text bg-custom-gradient hover:text-blue-800 flex items-center space-x-2">
-              <FaTwitter className="w-5 h-5" />
-              <span>Twitter</span>
-            </a>
-            <a href="https://linkedin.com" target="_blank" className="text-transparent bg-clip-text bg-custom-gradient hover:text-blue-800 flex items-center space-x-2">
-              <FaLinkedin className="w-5 h-5" />
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://instagram.com" target="_blank" className="text-transparent bg-clip-text bg-custom-gradient hover:text-pink-800 flex items-center space-x-2">
-              <FaInstagram className="w-5 h-5" />
-              <span>Instagram</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Map Integration */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-center text-gray-800">Our Location</h2>
-          <div className="mt-4">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=YOUR_MAP_URL"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
         </div>
       </div>
     </div>

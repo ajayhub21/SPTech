@@ -35,7 +35,7 @@ export default function Navbar() {
               <div className="flex items-center">
                 <img
                   className="h-12 w-auto sm:h-14 lg:h-16"
-                  src="/SPLOGO.svg"
+                  src="public/splogo1.png"
                   alt="SP Technology Logo"
                 />
               </div>
@@ -87,7 +87,7 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           <Disclosure.Panel className="lg:hidden">
-            <div className="space-y-1 px-4 pb-3 pt-4 bg-gradient-to-r from-blue-700 to-purple-600 shadow-lg">
+            <div className="space-y-1 px-4 pb-3 pt-4 bg-custom-gradient  shadow-lg">
               {updatedNavigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
