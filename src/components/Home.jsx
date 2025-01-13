@@ -38,8 +38,8 @@ const Home = () => {
   const contactRef = useRef(null);
 
   const sections = [
-    { component: <AboutUs />, ref: aboutUsRef },
     { component: <PortfolioCaseStudies />, ref: portfolioRef },
+    { component: <AboutUs />, ref: aboutUsRef },
     { component: <Blog />, ref: blogRef },
     { component: <FAQ />, ref: faqRef },
     { component: <Services />, ref: servicesRef },
@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="py-16  min-h-screen flex items-center ">
+      <div className="lg:mx-28 py-16  min-h-screen flex items-center ">
         <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center lg:space-x-12">
           <div className="lg:w-1/2 text-center lg:text-left">
             <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-custom-gradient leading-tight mb-6 animate-fadeIn">

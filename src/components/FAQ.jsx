@@ -112,11 +112,11 @@ const FAQ = () => {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <h2 className="text-2xl font-bold text-gray-800">
+          <div className="text-center container mx-auto px-6 mt-16 py-10 bg-custom-gradient rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold text-white">
               Want to Know More?
             </h2>
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-white">
               Contact us today to explore how our services can make document
               management seamless for you.
             </p>

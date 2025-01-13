@@ -19,7 +19,7 @@ import Terms from "../components/Terms";
 
 const LayOut = () => {
   return (
-    <div className="lg:mx-28">
+    <div>
       <Navbar />
       <Outlet />
       <Footer />

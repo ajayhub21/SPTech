@@ -74,21 +74,25 @@ const PortfolioCaseStudies = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 py-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="flex flex-col items-center p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-custom-gradient group"
             >
-              <div className="p-4 rounded-full bg-gray-100">{stat.icon}</div>
-              <h1 className="mt-6 text-3xl font-bold text-gray-700">
+              <div className="p-4 rounded-full bg-gray-100 group-hover:bg-opacity-20">
+                {stat.icon}
+              </div>
+              <h1 className="mt-6 text-3xl font-bold text-gray-700 group-hover:text-white">
                 <AnimatedNumber value={stat.value} />
                 {typeof stat.value === "number" && stat.value >= 1000
                   ? "+"
                   : ""}
               </h1>
-              <p className="text-gray-600 mt-2">{stat.label}</p>
+              <p className="text-gray-600 mt-2 group-hover:text-gray-200">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>
@@ -128,31 +132,33 @@ const PortfolioCaseStudies = () => {
 
       {/* Showcase Section */}
       {/* Showcase Section */}
-<div className="container mx-auto px-6 mt-16">
-  <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-    Showcase of {""}
-    <span className="text-transparent bg-clip-text bg-custom-gradient">
-      Successful Projects
-    </span>
-  </h2>
-  <div className="flex justify-center items-start min-h-0">
-    <ul className="list-disc list-inside text-gray-600 text-lg space-y-2">
-      <li className="text-lg text-gray-700 flex items-center gap-2">
-        <CheckBadgeIcon className="w-6 h-6 text-customText" />
-        Digitized thousands of legal documents for a leading law firm, reducing processing time by 70%.
-      </li>
-      <li className="text-lg text-gray-700 flex items-center gap-2">
-        <CheckBadgeIcon className="w-6 h-6 text-customText" />
-        Enhanced data retrieval for a financial institution by scanning and indexing over 10,000 records.
-      </li>
-      <li className="text-lg text-gray-700 flex items-center gap-2">
-        <CheckBadgeIcon className="w-6 h-6 text-customText" />
-        Streamlined record-keeping for a hospital chain with high-quality, securely scanned medical reports.
-      </li>
-    </ul>
-  </div>
-</div>
-
+      <div className="container mx-auto px-6 mt-16 py-10 bg-custom-gradient rounded-lg shadow-lg">
+        <h2 className="text-4xl font-extrabold text-white mb-8 text-center">
+          Showcase of{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
+            Successful Projects
+          </span>
+        </h2>
+        <div className="flex justify-center items-start">
+          <ul className="list-none space-y-4">
+            <li className="text-lg text-white flex items-center gap-4">
+              <CheckBadgeIcon className="w-8 h-8 text-teal-300" />
+              Digitized thousands of legal documents for a leading law firm,
+              reducing processing time by 70%.
+            </li>
+            <li className="text-lg text-white flex items-center gap-4">
+              <CheckBadgeIcon className="w-8 h-8 text-teal-300" />
+              Enhanced data retrieval for a financial institution by scanning
+              and indexing over 10,000 records.
+            </li>
+            <li className="text-lg text-white flex items-center gap-4">
+              <CheckBadgeIcon className="w-8 h-8 text-teal-300" />
+              Streamlined record-keeping for a hospital chain with high-quality,
+              securely scanned medical reports.
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   );
 };
