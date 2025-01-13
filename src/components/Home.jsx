@@ -38,8 +38,8 @@ const Home = () => {
   const contactRef = useRef(null);
 
   const sections = [
-    { component: <AboutUs />, ref: aboutUsRef },
     { component: <PortfolioCaseStudies />, ref: portfolioRef },
+    { component: <AboutUs />, ref: aboutUsRef },
     { component: <Blog />, ref: blogRef },
     { component: <FAQ />, ref: faqRef },
     { component: <Services />, ref: servicesRef },

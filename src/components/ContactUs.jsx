@@ -81,7 +81,8 @@ const ContactUs = () => {
             Contact Us for Inquiries or Custom Quotes
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            Let us know a little about yourself, and we’ll reach out to discuss how we can work together to drive your success.
+            Let us know a little about yourself, and we’ll reach out to discuss
+            how we can work together to drive your success.
           </p>
         </div>
 
@@ -91,7 +92,10 @@ const ContactUs = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Name
                 </label>
                 <input
@@ -101,14 +105,17 @@ const ContactUs = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your name"
-                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-700 focus:outline-none"
                   required
                 />
               </div>
 
               {/* Phone Number Field */}
               <div>
-                <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="mobile"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Phone Number
                 </label>
                 <input
@@ -118,7 +125,7 @@ const ContactUs = () => {
                   value={formData.mobile}
                   onChange={handleChange}
                   placeholder="Enter your phone number"
-                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-700 focus:outline-none"
                   required
                 />
                 {errors.mobile && (
@@ -128,7 +135,10 @@ const ContactUs = () => {
 
               {/* City Field */}
               <div>
-                <label htmlFor="city" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="city"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   City
                 </label>
                 <input
@@ -138,14 +148,17 @@ const ContactUs = () => {
                   value={formData.city}
                   onChange={handleChange}
                   placeholder="Enter your city"
-                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-700 focus:outline-none"
                   required
                 />
               </div>
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Email
                 </label>
                 <input
@@ -155,7 +168,7 @@ const ContactUs = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
-                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="mt-2 w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-700 focus:outline-none"
                   required
                 />
                 {errors.email && (
@@ -167,18 +180,24 @@ const ContactUs = () => {
             {/* Terms and Submit Button */}
             <div className="mt-6 text-sm text-gray-600">
               By submitting your information, you agree to our{" "}
-              <a href="/SPTech/Privacy" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
+              <a
+                href="/SPTech/Privacy"
+                className="text-transparent bg-clip-text bg-custom-gradient hover:underline"
+              >
                 Privacy Policy
               </a>{" "}
               and{" "}
-              <a href="/Terms" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
+              <a
+                href="/Terms"
+                className="text-transparent bg-clip-text bg-custom-gradient hover:underline"
+              >
                 Terms of Use
               </a>
               .
             </div>
             <button
               type="submit"
-              className="mt-6 w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition transform hover:-translate-y-1 hover:shadow-lg"
+              className="mt-6 w-full bg-custom-gradient text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition transform hover:-translate-y-1 hover:shadow-lg"
             >
               Submit
             </button>
