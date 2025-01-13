@@ -3,12 +3,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
-  { name: "HOME", href: "/SPTech", icon: "🏠" },
-  { name: "ABOUT", href: "/SPTech/Aboutus", icon: "ℹ️" },
-  { name: "SERVICES", href: "/SPTech/Services", icon: "🛠️" },
-  { name: "PORTFOLIO", href: "/SPTech/PortfolioCaseStudies", icon: "📁" },
-  { name: "CONTACT", href: "/SPTech/ContactUs", icon: "✉️" },
-  { name: "FAQ", href: "/SPTech/FAQ", icon: "❓" },
+  { name: "HOME", href: "/SPTech" },
+  { name: "ABOUT", href: "/SPTech/Aboutus" },
+  { name: "SERVICES", href: "/SPTech/Services" },
+  { name: "PORTFOLIO", href: "/SPTech/PortfolioCaseStudies" },
+  { name: "CONTACT", href: "/SPTech/ContactUs" },
+  { name: "FAQ", href: "/SPTech/FAQ" },
 ];
 
 function classNames(...classes) {
@@ -23,10 +23,7 @@ export default function Navbar() {
   }));
 
   return (
-    <Disclosure
-      as="nav"
-      className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-lg"
-    >
+    <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -35,7 +32,7 @@ export default function Navbar() {
               <div className="flex-shrink-0">
                 <img
                   className="h-10 w-auto sm:h-12 lg:h-14"
-                  src="public/splogo1.png"
+                  src="/splogo1.png"
                   alt="SP Technology Logo"
                 />
               </div>
@@ -49,8 +46,8 @@ export default function Navbar() {
                       to={item.href}
                       className={classNames(
                         item.current
-                          ? "bg-white text-blue-700"
-                          : "text-white hover:bg-white hover:text-blue-700",
+                          ? "bg-gray-200 text-blue-600"
+                          : "text-black hover:bg-gray-100 hover:text-blue-600",
                         "rounded-md px-4 py-2 text-sm font-medium transition-all duration-300"
                       )}
                       aria-current={item.current ? "page" : undefined}
@@ -63,7 +60,7 @@ export default function Navbar() {
 
               {/* Mobile Menu Button */}
               <div className="flex lg:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -77,36 +74,35 @@ export default function Navbar() {
 
           {/* Mobile Navigation Panel */}
           <Disclosure.Panel className="lg:hidden">
-            <div className="space-y-1 px-4 pb-3 pt-4 bg-gradient-to-b from-blue-700 to-blue-900 text-white">
-              {updatedNavigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as={Link}
-                  to={item.href}
-                  className={classNames(
-                    item.current
-                      ? "text-yellow-400 border-b-2 border-yellow-400"
-                      : "text-white hover:text-yellow-400",
-                    "block rounded-md px-4 py-2 text-lg font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  <span className="mr-2">{item.icon}</span>
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-            <div className="px-4 mt-3">
-              <Link
-                to="/join-us"
-                className="block w-full rounded-full bg-yellow-500 px-6 py-3 text-center text-base font-medium text-black hover:bg-yellow-600 shadow-lg hover:shadow-xl transition-transform transform hover:scale-105"
-              >
-                Join Us
-              </Link>
-            </div>
-          </Disclosure.Panel>
+  <div className="space-y-2 px-6 pb-4 pt-5 bg-gradient-to-b from-white via-gray-50 to-gray-100 shadow-md">
+    {updatedNavigation.map((item) => (
+      <Disclosure.Button
+        key={item.name}
+        as={Link}
+        to={item.href}
+        className={classNames(
+          item.current
+            ? "text-blue-600 font-semibold bg-blue-50 border-l-4 border-blue-600"
+            : "text-black hover:text-blue-600 hover:bg-gray-100",
+          "flex items-center space-x-4 block rounded-md px-4 py-3 text-lg font-medium transition-all duration-300"
+        )}
+        aria-current={item.current ? "page" : undefined}
+      >
+        {item.icon}
+        <span>{item.name}</span>
+      </Disclosure.Button>
+    ))}
+
+    {/* Optional Divider for Design Separation */}
+    <hr className="border-t border-gray-300 my-3" />
+
+    {/* Call-to-Action Button */}
+    
+  </div>
+</Disclosure.Panel>
+
         </>
       )}
     </Disclosure>
   );
-} 
+}
