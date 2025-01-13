@@ -9,7 +9,7 @@ import {
 const stats = [
   {
     icon: <DocumentTextIcon className="h-12 w-12 text-blue-500" />,
-    value: 1000000,
+    value: 1000,
     label: "Documents Scanned",
   },
   {
