@@ -113,7 +113,7 @@ const PortfolioCaseStudies = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <img
-              src="https://via.placeholder.com/400x300"
+              src="/SPTech/bulk-document-scanning-service.png"
               alt="Original Document"
               className="rounded-md w-full h-56 object-cover"
             />
@@ -121,7 +121,7 @@ const PortfolioCaseStudies = () => {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <img
-              src="https://via.placeholder.com/400x300"
+              src="/SPTech/kodak 1.jpg"
               alt="Scanned Document"
               className="rounded-md w-full h-56 object-cover"
             />

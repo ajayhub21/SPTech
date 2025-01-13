@@ -35,12 +35,13 @@ export default function Navbar() {
               <div className="flex items-center space-x-4">
                 <img
                   className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
-                  src="/SPTech/public/LogoDark.png"
+                  src="/SPTech/LogoDark.png"
                   alt="SP Technologies Logo"
                 />
-                <h1 className="text-black text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
-                  SP Technologies
-                </h1>
+                <h1 className="text-black text-lg sm:text-base lg:text-xl tracking-wide">
+  SP Technologies
+</h1>
+
               </div>
 
               {/* Desktop Navigation */}

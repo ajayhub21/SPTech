@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="mb-8 lg:mb-0">
             <div className="flex items-center justify-center lg:justify-start space-x-4">
               <img
-                src="/SPTech/public/LogoDark.png"
+                src="/SPTech/LogoDark.png"
                 alt="SP Technologies Logo"
                 className="h-14 w-14"
               />
