@@ -88,7 +88,7 @@ const Home = () => {
           <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center relative">
             <div className="w-full h-auto max-w-lg relative overflow-hidden">
               <img
-                src="/SPTech/HomeSide1"
+                src="/SPTech/HomeFirst.png"
                 alt="Document Scanning Solutions"
                 className="w-full max-w-full rounded-xl shadow-lg object-cover object-center transition duration-300 hover:scale-105"
               />
