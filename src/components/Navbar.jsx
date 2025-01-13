@@ -32,12 +32,18 @@ export default function Navbar() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               {/* Logo Section */}
-              <div className="flex-shrink-0">
-                <img
-                  className="h-10 w-auto sm:h-12 lg:h-14"
-                  src="public/splogo1.png"
-                  alt="SP Technology Logo"
-                />
+              <div className="flex h-16 items-center justify-between">
+                {/* Logo Section */}
+                <div className="flex items-center space-x-4">
+                  <img
+                    className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
+                    src="/SPTech/public/LogoDark.png"
+                    alt="SP Technologies Logo"
+                  />
+                  <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
+                    SP Technologies
+                  </h1>
+                </div>
               </div>
 
               {/* Desktop Navigation */}
@@ -109,4 +115,4 @@ export default function Navbar() {
       )}
     </Disclosure>
   );
-} 
+}
