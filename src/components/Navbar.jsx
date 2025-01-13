@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-lg"
+      className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-lg"
     >
       {({ open }) => (
         <>
