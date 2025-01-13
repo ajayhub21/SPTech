@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="py-16 bg-gradient-to-b from-blue-50 to-white min-h-screen flex items-center">
+      <div className="py-16  min-h-screen flex items-center ">
         <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center lg:space-x-12">
           <div className="lg:w-1/2 text-center lg:text-left">
             <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-custom-gradient leading-tight mb-6 animate-fadeIn">
@@ -88,7 +88,7 @@ const Home = () => {
           <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center relative">
             <div className="w-full h-auto max-w-lg relative overflow-hidden">
               <img
-                src="/SPTech/HomeSide.jpg"
+                src="/SPTech/HomeSide1"
                 alt="Document Scanning Solutions"
                 className="w-full max-w-full rounded-xl shadow-lg object-cover object-center transition duration-300 hover:scale-105"
               />

@@ -11,7 +11,7 @@ const AboutUs = () => {
         {/* <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-custom-gradient mb-8">
           About Us
         </h2> */}
-        <div className="py-16 bg-gradient-to-b from-blue-50 to-white min-h-screen flex items-center">
+        <div className="pb-6  min-h-screen flex items-center">
           {/* Hero Section */}
           <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center lg:space-x-12">
             {/* Left Content */}

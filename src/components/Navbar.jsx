@@ -25,11 +25,11 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed top-0 left-0 w-full z-50 bg-custom-gradient shadow-md"
+      className="bg-custom-gradient shadow-md fixed top-0 left-0 w-full z-50 "
     >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 bg-gradient-to-b from-blue-50 to-white sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <img

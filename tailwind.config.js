@@ -29,7 +29,7 @@ module.exports = {
       },
       backgroundImage: {
         "custom-gradient":
-          "linear-gradient(220.55deg, #5EE2FF 0%, #00576A 100%)",
+          "linear-gradient(220.55deg, #5D85A6 0%, #0E2C5E 100%)",
         "custom-navbar": "linear-gradient(220.55deg, #78B3CE 0%, #C9E6F0 100%)",
       },
       fontFamily: {
