@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 import Home from "../components/Home";
 import AboutUs from "../components/AboutUs";
 import Navbar from "../components/Navbar";
@@ -14,7 +19,7 @@ import Terms from "../components/Terms";
 
 const LayOut = () => {
   return (
-    <div className="pt-16">
+    <div className="lg:mx-28">
       <Navbar />
       <Outlet />
       <Footer />
@@ -34,7 +39,10 @@ function IntroRoutes() {
           <Route path="Pricing" element={<Pricing />} />
           <Route path="Blog" element={<Blog />} />
           <Route path="Privacy" element={<Privacy />} />
-          <Route path="PortfolioCaseStudies" element={<PortfolioCaseStudies />} />
+          <Route
+            path="PortfolioCaseStudies"
+            element={<PortfolioCaseStudies />}
+          />
           <Route path="ContactUs" element={<ContactUs />} />
           <Route path="Terms" element={<Terms />} />
         </Route>

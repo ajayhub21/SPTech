@@ -1,4 +1,4 @@
-import React from "react";
+import "@fortawesome/fontawesome-free/css/all.css";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -16,8 +16,8 @@ const Footer = () => {
               />
             </a>
             <p className="text-sm max-w-sm mx-auto lg:mx-0 text-white">
-              SP Technologies No:4 NSK Nagar,Rp Road,
-              Hasthinapuram,Chrompet ,Chennai-44 <br/>
+              SP Technologies No:4 NSK Nagar,Rp Road, Hasthinapuram,Chrompet
+              ,Chennai-44 <br />
               Moblie-9600600105
             </p>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => {
                   </a>
                 </li>
                 {/* <li> */}
-                  {/* <a
+                {/* <a
                     href="https://docon.freshteam.com/jobs"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -84,7 +84,10 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="" className="hover:text-blue-400 transition">
+                  <a
+                    href="/SPTech/FAQ"
+                    className="hover:text-blue-400 transition"
+                  >
                     FAQs
                   </a>
                 </li>
@@ -104,7 +107,10 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="/Terms" className="hover:text-blue-400 transition">
+                  <a
+                    href="/SPTech/Terms"
+                    className="hover:text-blue-400 transition"
+                  >
                     Terms
                   </a>
                 </li>
@@ -137,43 +143,32 @@ const Footer = () => {
               href="https://www.facebook.com/docon.co.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 transition transform"
+              className="hover:scale-110 transition transform text-white hover:text-blue-600"
             >
-              <img
-                src="https://cdn.prod.website-files.com/61d565f8e34ebb4e5dae2da8/61de92a7f093471c6ac45c48_Facebook.svg"
-                alt="Facebook"
-                className="h-8"
-              />
+              <i className="fab fa-facebook fa-2x"></i>
             </a>
             <a
               href="https://www.instagram.com/docon_technologies/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 transition transform"
+              className="hover:scale-110 transition transform text-white hover:text-pink-500"
             >
-              <img
-                src="https://cdn.prod.website-files.com/61d565f8e34ebb4e5dae2da8/61de92ad8718a5da09662665_Instagram.svg"
-                alt="Instagram"
-                className="h-8"
-              />
+              <i className="fab fa-instagram fa-2x"></i>
             </a>
             <a
               href="https://www.youtube.com/channel/UCTIM0imwM3wCAv6VuopEZgA"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 transition transform"
+              className="hover:scale-110 transition transform text-white hover:text-red-500"
             >
-              <img
-                src="https://cdn.prod.website-files.com/61d565f8e34ebb4e5dae2da8/61de92b0d97710189a137b10_Youtube.svg"
-                alt="YouTube"
-                className="h-8"
-              />
+              <i className="fab fa-youtube fa-2x"></i>
             </a>
           </div>
+        </div>
 
-          {/* App Links */}
-          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-            {/* <a
+        {/* App Links */}
+        <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+          {/* <a
               href="https://apps.apple.com/us/app/docon/id1505731925"
               target="_blank"
               rel="noopener noreferrer"
@@ -185,13 +180,12 @@ const Footer = () => {
                 className="h-12"
               />
             </a> */}
-          </div>
         </div>
+      </div>
 
-        {/* Footer Bottom Section */}
-        <div className="mt-12 text-center text-sm text-gray-400">
-          © All rights reserved. SP Technologies
-        </div>
+      {/* Footer Bottom Section */}
+      <div className="mt-12 text-center text-sm text-gray-400">
+        © All rights reserved. SP Technologies
       </div>
     </footer>
   );
