@@ -6,7 +6,7 @@ import {
 
 const AboutUs = () => {
   return (
-    <section className="text-gray-800">
+    <section className="text-gray-800 lg:mx-28">
       <div className="container mx-auto px-6">
         {/* <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-custom-gradient mb-8">
           About Us
@@ -42,11 +42,12 @@ const AboutUs = () => {
         {/* Your Story */}
 
         {/* Mission & Vision */}
-        <div className="mb-12 bg-blue-50 p-8 rounded-lg border border-blue-200 shadow-md">
-          <h3 className="text-2xl font-semibold text-center text-transparent bg-clip-text bg-custom-gradient mb-4">
+
+        <div className="mb-12 bg-custom-gradient p-10 rounded-lg shadow-lg border border-opacity-10 border-gray-200">
+          <h3 className="text-3xl font-bold text-center text-white mb-6">
             Mission & Vision
           </h3>
-          <p className="text-lg text-center text-gray-600 leading-relaxed mx-auto max-w-2xl">
+          <p className="text-lg text-center text-gray-100 leading-relaxed mx-auto max-w-3xl">
             Our mission is to transform document management by providing fast,
             secure, and user-friendly scanning services. We aim to be the leader
             in digital document solutions, helping our clients boost

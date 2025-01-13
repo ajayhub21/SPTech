@@ -134,7 +134,7 @@ const PortfolioCaseStudies = () => {
             Successful Projects
           </span>
         </h2>
-        <ul className="list-disc list-inside text-gray-600 text-lg">
+        <ul className="list-disc list-inside text-gray-600 text-lg text-center">
           <li className="text-lg text-gray-700 flex items-center gap-2">
             <CheckBadgeIcon className="w-6 h-6 text-customText" />
             Digitized thousands of legal documents for a leading law firm,
