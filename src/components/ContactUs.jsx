@@ -73,7 +73,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-gray-100 py-16 px-6">
+    <div className="bg-gradient-to-b from-blue-50 to-gray-100 py-20 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center">

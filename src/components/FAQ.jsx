@@ -63,7 +63,7 @@ const FAQ = () => {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-blue-100 text-gray-800">
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-blue-100 text-gray-800">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">

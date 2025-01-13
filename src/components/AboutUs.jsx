@@ -6,7 +6,7 @@ import {
 
 const AboutUs = () => {
   return (
-    <section className="text-gray-800 lg:mx-28">
+    <section className="text-gray-800 lg:mx-28 py-20">
       <div className="container mx-auto px-6">
         {/* <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-custom-gradient mb-8">
           About Us

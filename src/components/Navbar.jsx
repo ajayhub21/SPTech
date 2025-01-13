@@ -53,8 +53,8 @@ export default function Navbar() {
                       to={item.href}
                       className={classNames(
                         item.current
-                          ? "bg-gray-200 text-blue-600"
-                          : "text-black hover:bg-gray-100 hover:text-blue-600",
+                          ? "bg-custom-gradient text-white"
+                          : "text-black hover:bg-custom-gradient hover:from-blue-500 hover:via-green-400 hover:to-blue-500 hover:text-white",
                         "rounded-md px-4 py-2 text-sm font-medium transition-all duration-300"
                       )}
                       aria-current={item.current ? "page" : undefined}
@@ -79,42 +79,31 @@ export default function Navbar() {
             </div>
           </div>
 
-      {/* Mobile Navigation Panel */}
-{/* Mobile Navigation Panel */}
-<Disclosure.Panel className="lg:hidden fixed inset-0 z-50 bg-white bg-opacity-95 backdrop-blur-md overflow-y-auto">
-  <div className="space-y-6 px-6 pt-16 pb-8 flex flex-col items-start min-h-screen">
-    
-    {/* Navigation Links with Hover Highlight */}
-    {updatedNavigation.map((item) => (
-      <Disclosure.Button
-        key={item.name}
-        as={Link}
-        to={item.href}
-        className={classNames(
-          item.current
-            ? "text-blue-600 font-semibold bg-blue-100 rounded-md px-4 py-3"
-            : "text-black hover:text-blue-600 hover:bg-blue-50 hover:shadow-md rounded-md px-4 py-3",
-          "w-full text-center text-lg font-medium transition-all duration-300"
-        )}
-        aria-current={item.current ? "page" : undefined}
-      >
-        {item.name}
-      </Disclosure.Button>
-    ))}
-
-    {/* Divider for Design Separation */}
-    <hr className="border-t border-gray-300 my-4 w-full" />
-
-   
-
-    {/* Close Menu Button */}
-    <Disclosure.Button className="absolute top-4 right-4 p-2 text-black rounded-full hover:bg-gray-300 transition-colors duration-300">
-      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-    </Disclosure.Button>
-  </div>
-</Disclosure.Panel>
-
-
+          {/* Mobile Navigation Panel */}
+          <Disclosure.Panel className="lg:hidden fixed inset-0 z-50 bg-white bg-opacity-95 backdrop-blur-md overflow-y-auto">
+            <div className="space-y-6 px-6 pt-16 pb-8 flex flex-col items-start min-h-screen">
+              {updatedNavigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as={Link}
+                  to={item.href}
+                  className={classNames(
+                    item.current
+                      ? "bg-custom-gradient text-white font-semibold rounded-md px-4 py-3"
+                      : "text-black hover:text-white hover:bg-custom-gradient hover:from-blue-500 hover:via-green-400 hover:to-blue-500 hover:shadow-md rounded-md px-4 py-3",
+                    "w-full text-center text-lg font-medium transition-all duration-300"
+                  )}
+                  aria-current={item.current ? "page" : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+              <hr className="border-t border-gray-300 my-4 w-full" />
+              <Disclosure.Button className="absolute top-0 right-4 p-2 text-black rounded-full hover:bg-gray-300 transition-colors duration-300">
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </Disclosure.Button>
+            </div>
+          </Disclosure.Panel>
         </>
       )}
     </Disclosure>
