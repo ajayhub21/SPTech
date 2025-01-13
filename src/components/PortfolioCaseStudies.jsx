@@ -127,31 +127,32 @@ const PortfolioCaseStudies = () => {
       </div>
 
       {/* Showcase Section */}
-      <div className="container mx-auto px-6 mt-16">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-          Showcase of {""}
-          <span className="text-transparent bg-clip-text bg-custom-gradient">
-            Successful Projects
-          </span>
-        </h2>
-        <ul className="list-disc list-inside text-gray-600 text-lg">
-          <li className="text-lg text-gray-700 flex items-center gap-2">
-            <CheckBadgeIcon className="w-6 h-6 text-customText" />
-            Digitized thousands of legal documents for a leading law firm,
-            reducing processing time by 70%.
-          </li>
-          <li className="text-lg text-gray-700 flex items-center gap-2">
-            <CheckBadgeIcon className="w-6 h-6 text-customText" />
-            Enhanced data retrieval for a financial institution by scanning and
-            indexing over 10,000 records.
-          </li>
-          <li className="text-lg text-gray-700 flex items-center gap-2">
-            <CheckBadgeIcon className="w-6 h-6 text-customText" />
-            Streamlined record-keeping for a hospital chain with high-quality,
-            securely scanned medical reports.
-          </li>
-        </ul>
-      </div>
+      {/* Showcase Section */}
+<div className="container mx-auto px-6 mt-16">
+  <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+    Showcase of {""}
+    <span className="text-transparent bg-clip-text bg-custom-gradient">
+      Successful Projects
+    </span>
+  </h2>
+  <div className="flex justify-center items-start min-h-0">
+    <ul className="list-disc list-inside text-gray-600 text-lg space-y-2">
+      <li className="text-lg text-gray-700 flex items-center gap-2">
+        <CheckBadgeIcon className="w-6 h-6 text-customText" />
+        Digitized thousands of legal documents for a leading law firm, reducing processing time by 70%.
+      </li>
+      <li className="text-lg text-gray-700 flex items-center gap-2">
+        <CheckBadgeIcon className="w-6 h-6 text-customText" />
+        Enhanced data retrieval for a financial institution by scanning and indexing over 10,000 records.
+      </li>
+      <li className="text-lg text-gray-700 flex items-center gap-2">
+        <CheckBadgeIcon className="w-6 h-6 text-customText" />
+        Streamlined record-keeping for a hospital chain with high-quality, securely scanned medical reports.
+      </li>
+    </ul>
+  </div>
+</div>
+
     </section>
   );
 };
