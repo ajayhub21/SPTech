@@ -58,7 +58,7 @@ const AnimatedNumber = ({ value }) => {
 
 const PortfolioCaseStudies = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
+    <section className="py-20 px-16 bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Title */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">

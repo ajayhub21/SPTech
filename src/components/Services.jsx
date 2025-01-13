@@ -2,7 +2,7 @@ import React from "react";
 
 function Services() {
   return (
-    <div className="container mx-auto flex flex-col items-center px-4 lg:px-8 py-12">
+    <div className="container mx-auto flex flex-col items-center px-4 lg:px-8 py-20">
       {/* Heading Section */}
       <div className="text-center max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
