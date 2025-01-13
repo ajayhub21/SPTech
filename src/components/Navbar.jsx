@@ -72,9 +72,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Navigation Panel */}
-          <Disclosure.Panel className="lg:hidden">
-  <div className="space-y-2 px-6 pb-4 pt-5 bg-gradient-to-b from-white via-gray-50 to-gray-100 shadow-md">
+      {/* Mobile Navigation Panel */}
+{/* Mobile Navigation Panel */}
+<Disclosure.Panel className="lg:hidden fixed inset-0 z-50 bg-white bg-opacity-95 backdrop-blur-md overflow-y-auto">
+  <div className="space-y-6 px-6 pt-16 pb-8 flex flex-col items-start min-h-screen">
+    
+    {/* Navigation Links with Hover Highlight */}
     {updatedNavigation.map((item) => (
       <Disclosure.Button
         key={item.name}
@@ -82,24 +85,28 @@ export default function Navbar() {
         to={item.href}
         className={classNames(
           item.current
-            ? "text-blue-600 font-semibold bg-blue-50 border-l-4 border-blue-600"
-            : "text-black hover:text-blue-600 hover:bg-gray-100",
-          "flex items-center space-x-4 block rounded-md px-4 py-3 text-lg font-medium transition-all duration-300"
+            ? "text-blue-600 font-semibold bg-blue-100 rounded-md px-4 py-3"
+            : "text-black hover:text-blue-600 hover:bg-blue-50 hover:shadow-md rounded-md px-4 py-3",
+          "w-full text-center text-lg font-medium transition-all duration-300"
         )}
         aria-current={item.current ? "page" : undefined}
       >
-        {item.icon}
-        <span>{item.name}</span>
+        {item.name}
       </Disclosure.Button>
     ))}
 
-    {/* Optional Divider for Design Separation */}
-    <hr className="border-t border-gray-300 my-3" />
+    {/* Divider for Design Separation */}
+    <hr className="border-t border-gray-300 my-4 w-full" />
 
-    {/* Call-to-Action Button */}
-    
+   
+
+    {/* Close Menu Button */}
+    <Disclosure.Button className="absolute top-4 right-4 p-2 text-black rounded-full hover:bg-gray-300 transition-colors duration-300">
+      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+    </Disclosure.Button>
   </div>
 </Disclosure.Panel>
+
 
         </>
       )}
