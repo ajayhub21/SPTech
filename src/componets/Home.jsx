@@ -35,15 +35,16 @@ const Home = () => {
   const portfolioRef = useRef(null);
   const blogRef = useRef(null);
   const faqRef = useRef(null);
-  const pricingRef = useRef(null);
+  // const pricingRef = useRef(null);
   const contactRef = useRef(null);
 
   const sections = [
     { component: <AboutUs />, ref: aboutUsRef },
-    { component: <Blog />, ref: blogRef },
     { component: <PortfolioCaseStudies />, ref: portfolioRef },
+    { component: <Blog />, ref: blogRef },
+   
     { component: <FAQ />, ref: faqRef },
-    { component: <Pricing />, ref: pricingRef },
+    // { component: <Pricing />, ref: pricingRef },
     { component: <Services />, ref: servicesRef },
     { component: <ContactUs />, ref: contactRef },
   ];

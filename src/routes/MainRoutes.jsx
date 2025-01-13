@@ -14,6 +14,8 @@ import PortfolioCaseStudies from "../componets/PortfolioCaseStudies";
 import ContactUs from "../componets/ContactUs";
 import Pricing from "../componets/Pricing";
 import Blog from "../componets/Blog";
+import Privacy from "../componets/Privacy";
+import Terms from "../componets/Terms";
 const LayOut = () => {
   return (
     <div className="pt-16">
@@ -35,11 +37,13 @@ function IntroRoutes() {
           <Route path="/SPTech/FAQ" element={<FAQ />} />
           <Route path="/SPTech/Pricing" element={<Pricing />} />
           <Route path="/SPTech/Blog" element={<Blog />} />
+          <Route path="/SPTech/Privacy" element={<Privacy/>}/>
           <Route
             path="/SPTech/PortfolioCaseStudies"
             element={<PortfolioCaseStudies />}
           />
           <Route path="/SPTech/ContactUs" element={<ContactUs />} />
+          <Route path="/SPTech/Terms" element={<Terms />} />
         </Route>
       </Routes>
     </Router>

@@ -15,8 +15,7 @@ const ContactUs = () => {
   const validatePhoneNumber = (number) => /^\d+$/.test(number);
 
   // Validate email format
-  const validateEmail = (email) =>
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -168,7 +167,7 @@ const ContactUs = () => {
             {/* Terms and Submit Button */}
             <div className="mt-6 text-sm text-gray-600">
               By submitting your information, you agree to our{" "}
-              <a href="/Privacy" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
+              <a href="/SPTech/Privacy" className="text-transparent bg-clip-text bg-custom-gradient hover:underline">
                 Privacy Policy
               </a>{" "}
               and{" "}
@@ -196,6 +195,24 @@ const ContactUs = () => {
               Oops! Something went wrong while submitting the form.
             </div>
           )}
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-12">
+          <h2 className="text-xl font-semibold text-gray-700">Find Us Here:</h2>
+          <div className="mt-4">
+            <iframe
+              title="SP Technologies Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31107.7981136804!2d80.12702192390835!3d12.951322400392057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f6b56a0f0a97%3A0x5eb38d1234567890!2sSP%20Technologies%2C%20No%204%20NSK%20Nagar%2C%20Rp%20Road%2C%20Chromepet%2C%20Chennai%2044!5e0!3m2!1sen!2sin!4v1671234567890"
+              width="100%"
+              height="300"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen
+              aria-hidden="false"
+              tabIndex="0"
+            />
+          </div>
         </div>
       </div>
     </div>

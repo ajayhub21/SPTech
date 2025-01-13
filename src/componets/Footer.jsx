@@ -16,8 +16,9 @@ const Footer = () => {
               />
             </a>
             <p className="text-sm max-w-sm mx-auto lg:mx-0 text-white">
-              Block-1, 4th Floor, Prestige Blue Chip Software Park Adugodi,
-              Dairy Colony, Karnataka - 560029
+              SP Technologies No:4 NSK Nagar,Rp Road,
+              Hasthinapuram,Chrompet ,Chennai-44 <br/>
+              Moblie-9600600105
             </p>
           </div>
 
@@ -31,38 +32,38 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="/Services"
-                    className="hover: text-Textcolor transition"
+                    href="/SPTech/Services"
+                    className="hover:text-blue-400 transition"
                   >
                     Services
                   </a>
                 </li>
-                <li>
-                  <a
+                {/* <li> */}
+                  {/* <a
                     href="https://docon.freshteam.com/jobs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-blue-400 transition"
                   >
                     Career
-                  </a>
-                </li>
+                  </a> */}
+                {/* </li> */}
                 <li>
                   <a
-                    href="/about-us"
+                    href="/SPTech/Aboutus"
                     className="hover:text-blue-400 transition"
                   >
                     About Us
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="/patients"
                     className="hover:text-blue-400 transition"
                   >
                     Patients
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -74,7 +75,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://medium.com/@docon"
+                    href="/SPTech/Blog"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-blue-400 transition"
@@ -83,7 +84,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/faq" className="hover:text-blue-400 transition">
+                  <a href="" className="hover:text-blue-400 transition">
                     FAQs
                   </a>
                 </li>
@@ -96,7 +97,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    to="/Privacy"
+                    to="/SPTech/Privacy"
                     className="hover:text-blue-400 transition"
                   >
                     Privacy
@@ -107,14 +108,14 @@ const Footer = () => {
                     Terms
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="/Refund-And=Cancellation"
                     className="hover:text-blue-400 transition"
                   >
                     Refund & Cancellation
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <button
                     onClick={() => console.log("Contact action")}
@@ -172,7 +173,7 @@ const Footer = () => {
 
           {/* App Links */}
           <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-            <a
+            {/* <a
               href="https://apps.apple.com/us/app/docon/id1505731925"
               target="_blank"
               rel="noopener noreferrer"
@@ -183,7 +184,7 @@ const Footer = () => {
                 alt="App Store"
                 className="h-12"
               />
-            </a>
+            </a> */}
           </div>
         </div>
 
