@@ -25,15 +25,16 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-custom-gradient shadow-md fixed top-0 left-0 w-full z-50 "
+      className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-lg"
     >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
-              <div className="flex items-center">
+              {/* Logo Section */}
+              <div className="flex-shrink-0">
                 <img
-                  className="h-14 w-auto sm:h-16 lg:h-20"
+                  className="h-10 w-auto sm:h-12 lg:h-14"
                   src="public/splogo1.png"
                   alt="SP Technology Logo"
                 />
@@ -41,15 +42,15 @@ export default function Navbar() {
 
               {/* Desktop Navigation */}
               <div className="hidden lg:block">
-                <div className="flex space-x-6">
+                <div className="flex space-x-8">
                   {updatedNavigation.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
                       className={classNames(
                         item.current
-                          ? "bg-white text-customText"
-                          : "text-white hover:bg-white hover:text-customText",
+                          ? "bg-white text-blue-700"
+                          : "text-white hover:bg-white hover:text-blue-700",
                         "rounded-md px-4 py-2 text-sm font-medium transition-all duration-300"
                       )}
                       aria-current={item.current ? "page" : undefined}
@@ -60,8 +61,9 @@ export default function Navbar() {
                 </div>
               </div>
 
+              {/* Mobile Menu Button */}
               <div className="flex lg:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -73,8 +75,9 @@ export default function Navbar() {
             </div>
           </div>
 
+          {/* Mobile Navigation Panel */}
           <Disclosure.Panel className="lg:hidden">
-            <div className="space-y-1 px-4 pb-3 pt-4 bg-gradient-to-b from-black to-gray-900">
+            <div className="space-y-1 px-4 pb-3 pt-4 bg-gradient-to-b from-blue-700 to-blue-900 text-white">
               {updatedNavigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -82,8 +85,8 @@ export default function Navbar() {
                   to={item.href}
                   className={classNames(
                     item.current
-                      ? "text-yellow-500 border-b-2 border-yellow-500"
-                      : "text-white hover:text-yellow-500",
+                      ? "text-yellow-400 border-b-2 border-yellow-400"
+                      : "text-white hover:text-yellow-400",
                     "block rounded-md px-4 py-2 text-lg font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
