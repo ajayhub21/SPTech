@@ -98,19 +98,21 @@ const Home = () => {
       </div>
 
       {/* Section Rendering */}
-      {sections.map(({ component, ref }, index) => (
-        <div
-          key={index}
-          ref={ref}
-          className={`transition duration-1000 transform ${
-            useAnimateOnView(ref)
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
-          }`}
-        >
-          {component}
-        </div>
-      ))}
+      {sections.map(({ component, ref }, index) => {
+        const isInView = useAnimateOnView(ref); // Use the hook here
+
+        return (
+          <div
+            key={index}
+            ref={ref}
+            className={`transition duration-1000 transform ${
+              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            {component}
+          </div>
+        );
+      })}
     </>
   );
 };
