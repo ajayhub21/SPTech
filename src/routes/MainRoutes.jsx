@@ -1,16 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "../componets/Home";
-import AboutUs from "../componets/AboutUs";
-import Navbar from "../componets/Navbar";
-import Footer from "../componets/Footer";
-import Services from "../componets/Services";
-import FAQ from "../componets/FAQ";
-import PortfolioCaseStudies from "../componets/PortfolioCaseStudies";
-import ContactUs from "../componets/ContactUs";
-import Pricing from "../componets/Pricing";
-import Blog from "../componets/Blog";
-import Privacy from "../componets/Privacy";
-import Terms from "../componets/Terms";
+import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import Home from "../components/Home";
+import AboutUs from "../components/AboutUs";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Services from "../components/Services";
+import FAQ from "../components/FAQ";
+import PortfolioCaseStudies from "../components/PortfolioCaseStudies";
+import ContactUs from "../components/ContactUs";
+import Pricing from "../components/Pricing";
+import Blog from "../components/Blog";
+import Privacy from "../components/Privacy";
+import Terms from "../components/Terms";
+
 const LayOut = () => {
   return (
     <div className="pt-16">
@@ -26,19 +27,16 @@ function IntroRoutes() {
     <Router>
       <Routes>
         <Route path="/SPTech" element={<LayOut />}>
-          <Route path="/SPTech" element={<Home />} />
-          <Route path="/SPTech/Aboutus" element={<AboutUs />} />
-          <Route path="/SPTech/Services" element={<Services />} />
-          <Route path="/SPTech/FAQ" element={<FAQ />} />
-          <Route path="/SPTech/Pricing" element={<Pricing />} />
-          <Route path="/SPTech/Blog" element={<Blog />} />
-          <Route path="/SPTech/Privacy" element={<Privacy/>}/>
-          <Route
-            path="/SPTech/PortfolioCaseStudies"
-            element={<PortfolioCaseStudies />}
-          />
-          <Route path="/SPTech/ContactUs" element={<ContactUs />} />
-          <Route path="/SPTech/Terms" element={<Terms />} />
+          <Route index element={<Home />} />
+          <Route path="Aboutus" element={<AboutUs />} />
+          <Route path="Services" element={<Services />} />
+          <Route path="FAQ" element={<FAQ />} />
+          <Route path="Pricing" element={<Pricing />} />
+          <Route path="Blog" element={<Blog />} />
+          <Route path="Privacy" element={<Privacy />} />
+          <Route path="PortfolioCaseStudies" element={<PortfolioCaseStudies />} />
+          <Route path="ContactUs" element={<ContactUs />} />
+          <Route path="Terms" element={<Terms />} />
         </Route>
       </Routes>
     </Router>

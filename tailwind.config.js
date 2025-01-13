@@ -18,7 +18,7 @@ module.exports = {
         },
       },
       colors: {
-        customText: "#00576A",
+        customText: "#7E99A3",
         Textcolor: "#A6A6A6", // Custom text color
       },
       margin: {
