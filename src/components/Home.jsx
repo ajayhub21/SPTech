@@ -15,7 +15,6 @@ const Home = () => {
     console.log("Phone Number Submitted: ", phoneNumber);
   };
 
-  // Custom hook for animation triggering
   const useAnimateOnView = (ref) => {
     const [visible, setVisible] = useState(false);
     useEffect(() => {
@@ -29,7 +28,6 @@ const Home = () => {
     return visible;
   };
 
-  // References for components
   const aboutUsRef = useRef(null);
   const servicesRef = useRef(null);
   const portfolioRef = useRef(null);
@@ -49,19 +47,19 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="lg:mx-28 py-16  min-h-screen flex items-center ">
-        <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center lg:space-x-12">
-          <div className="lg:w-1/2 text-center lg:text-left">
-            <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-custom-gradient leading-tight mb-6 animate-fadeIn">
+      <div className="lg:mx-28 py-16 min-h-screen flex items-center">
+        <div className="container mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center lg:space-x-12">
+          <div className="lg:w-1/2 text-center lg:text-left space-y-6">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-custom-gradient leading-tight">
               Effortless Document Scanning Solutions for Your Business Needs
             </h1>
-            <p className="text-gray-700 text-lg mb-8 max-w-xl">
+            <p className="text-gray-700 text-base md:text-lg max-w-xl">
               Streamline your document management with advanced scanning
               technology designed to enhance productivity and efficiency.
             </p>
             <form
               onSubmit={handleSubmit}
-              className="mt-4 flex items-center justify-center lg:justify-start space-x-4"
+              className="mt-4 flex flex-col md:flex-row items-center justify-center lg:justify-start space-y-4 md:space-y-0 md:space-x-4"
             >
               <div className="flex items-center border border-gray-300 rounded-lg px-3 py-2 bg-white shadow-md">
                 <span className="text-gray-500 font-medium">+91</span>
@@ -73,7 +71,7 @@ const Home = () => {
                 value={phoneNumber}
                 onChange={handleInputChange}
                 placeholder="Enter your phone number"
-                className="w-full max-w-xs border border-gray-300 rounded-lg px-4 py-2 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full md:max-w-xs border border-gray-300 rounded-lg px-4 py-2 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
                 type="submit"
@@ -99,8 +97,7 @@ const Home = () => {
 
       {/* Section Rendering */}
       {sections.map(({ component, ref }, index) => {
-        const isInView = useAnimateOnView(ref); // Use the hook here
-
+        const isInView = useAnimateOnView(ref);
         return (
           <div
             key={index}
