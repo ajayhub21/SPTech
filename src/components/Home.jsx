@@ -6,6 +6,7 @@ import FAQ from "./FAQ";
 import Pricing from "./Pricing";
 import Services from "./Services";
 import ContactUs from "./ContactUs";
+import Features from "./Features";
 
 const Home = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -37,11 +38,14 @@ const Home = () => {
 
   const sections = [
     { component: <PortfolioCaseStudies />, ref: portfolioRef },
+    { component: <Services />, ref: servicesRef },
     { component: <AboutUs />, ref: aboutUsRef },
+    // { component: <Features/>, ref: contactRef },
     { component: <Blog />, ref: blogRef },
     { component: <FAQ />, ref: faqRef },
-    { component: <Services />, ref: servicesRef },
+    
     { component: <ContactUs />, ref: contactRef },
+    
   ];
 
   return (
